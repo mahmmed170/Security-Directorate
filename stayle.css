@@ -1,0 +1,500 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 15px;
+    position: relative;
+    z-index: 1000;
+}
+
+.navbar .logo img {
+    max-height: 100px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-icon span {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+#dropdown-menu {
+    display: none; /* Start with dropdown menu hidden */
+    position: absolute;
+    top: 60px; /* Adjusted to appear below the navbar */
+    right: 0;
+    background-color: #333;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+    z-index: 999; /* Ensure it appears above other content */
+}
+
+#dropdown-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0px;
+}
+
+#dropdown-menu ul li {
+    padding: 10px 20px;
+}
+
+#dropdown-menu ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.card {
+    margin-top: 0px; /* Adjusted to ensure the image is properly aligned */
+}
+
+.card-img {
+    max-height: 500px;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide navbar links on small screens */
+    }
+
+    .menu-icon {
+        display: flex; /* Show menu icon on small screens */
+        right: 50px; /* Move the icon to the left */
+        position: absolute;
+    }
+
+    .navbar {
+        justify-content: space-between; /* Align the logo and menu icon */
+    }
+
+    #dropdown-menu {
+        top: 60px; /* Adjusted to appear below the navbar */
+        width: 100%; /* Full width for the dropdown menu */
+    }
+
+    #dropdown-menu.active {
+        display: block; /* Show dropdown menu when active */
+    }
+}
+
+
+
+
+/* ------ */
+
+
+
+
+.container {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 40px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.image {
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+}
+
+.content {
+    padding: 20px;
+}
+
+.content h2 {
+    font-size: 24px;
+    margin: 10px 0;
+    color: rgb(7, 81, 192);
+}
+
+.content  p {
+    font-size: 14px;
+    color: #000000;
+}
+.content  #p {
+    color: #0b2ce2;
+}
+
+
+
+
+/*----*/.section .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    flex-wrap: wrap; /* لإتاحة الانتقال إلى سطر جديد عند الحاجة */
+}
+
+.cards2 {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* لضمان أن البطاقات تنتقل إلى سطر جديد على الشاشات الأصغر */
+    justify-content: center; /* لضمان توسيط البطاقات عند الانتقال إلى سطر جديد */
+}
+
+.stat-card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.icon img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.details h3 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.details p {
+    margin: 10px 0 5px;
+    color: #666;
+}
+
+.change {
+    font-size: 14px;
+}
+
+/* استعلام الوسائط للشاشات الأصغر */
+@media (max-width: 768px) {
+    .stat-card {
+        width: 100%; /* يجعل البطاقات تأخذ العرض الكامل */
+        margin-bottom: 15px; /* مساحة إضافية بين البطاقات */
+    }
+
+    .cards2 {
+        flex-direction: column; /* يجعل البطاقات تظهر واحدة تلو الأخرى */
+        align-items: center;
+    }
+}
+.login-container {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+    height: auto;
+    overflow: hidden;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.illustration {
+    background-color: #9e85cc;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    max-width: 50%;
+}
+
+.illustration img {
+    max-width: 100%;
+    height: auto;
+}
+
+.login-form {
+    padding: 40px;
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #6c63ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #5848c2;
+}
+
+.social-icons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.social-icons a {
+    margin: 0 10px;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .login-container {
+        flex-direction: column;
+    }
+
+    .illustration, 
+    .login-form {
+        max-width: 100%;
+    }
+}
+
+   /* ABOUT */
+.about {
+    padding: 4rem 0; /* إضافة مسافة علوية وسفلية لتمركز المحتوى */
+}
+
+.about .row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center; /* لجعل المحتوى في وسط الصفحة */
+}
+
+.about .row .image {
+    flex: 1 1 22rem;
+}
+
+.about .row .image img {
+    width: 70%;
+    animation: aboutImage 4s linear infinite;
+}
+
+@keyframes aboutImage {
+    0%,
+    100% {
+        transform: scale(.9);
+        border-radius: var(--border-radius-hover);
+    }
+    50% {
+        transform: scale(.8);
+        border-radius: var(--border-radius);
+    }
+}
+
+.about .row .content {
+    flex: 1 1 42rem;
+}
+
+.about .row .content .title {
+    color: var(--main-color);
+    font-size: 3rem;
+    line-height: 1.8;
+}
+
+.about .row .content p {
+    color: var(--main-color);
+    font-size: 1.5rem;
+    line-height: 1.8;
+    padding: 1rem 0;
+    text-align: right;
+}
+
+.about .row .content .icons-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-top: 3rem;
+}
+
+.about .row .content .icons-container .icons {
+    flex: 1 1 15rem;
+    padding: 1.5rem;
+    text-align: center;
+    border: var(--border);
+    border-radius: var(--border-radius);
+}
+
+.about .row .content .icons-container .icons img {
+    height: 5rem;
+}
+
+.about .row .content .icons-container .icons h3 {
+    font-size: 1.7rem;
+    padding-top: 1rem;
+    color: var(--main-color);
+}
+
+ iframe{
+    width:50%;
+    margin-top:100px;
+    margin-left:25%;
+    
+}
+
+/* استعلامات الوسائط للشاشات الصغيرة */
+@media (max-width: 768px) {
+    .about .row {
+        flex-direction: column; /* تغيير الاتجاه إلى عمودي للشاشات الصغيرة */
+        align-items: center; /* محاذاة المحتوى في الوسط */
+        text-align: center; /* نص الوسط للمحتوى */
+    }
+    
+    .about .row .image,
+    .about .row .content {
+        flex: 1 1 100%; /* جعل العناصر تأخذ العرض الكامل */
+    }
+
+    .about .row .content .title {
+        font-size: 2.5rem; /* تقليل حجم النص */
+    }
+
+    .about .row .content p {
+        font-size: 1.4rem; /* تقليل حجم النص */
+    }
+}
+footer {
+    background-color: #4d668b;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .logo-container {
+    margin-bottom: 10px;
+  }
+  
+  .logo {
+    font-size: 3em; /* حجم الشعار، يمكنك تعديله حسب الرغبة */
+    color: #333; /* لون الشعار */
+  }
+  
+  .logo-name {
+    font-size: 1.2em;
+    margin-top: 5px;
+  }
+  
+  .social-icons {
+    margin-top: 10px;
+  }
+  
+  .social-icon {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 1.5em; /* حجم الأيقونات */
+    color: #333; /* لون الأيقونات */
+    text-decoration: none;
+  }
+  
+  .social-icon:hover {
+    color: #007bff; /* لون الأيقونات عند التمرير عليها */
+  }
+  .foot{
+    margin-top: 200px;
+  }
+
